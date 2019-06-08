@@ -1,0 +1,12 @@
+<!-- CARRERAS VIGENTES -->
+<div class="row" id="cards" *ngIf="showdetalleCarrera">
+    <div class="card" style="width: 18rem; height: 14rem;; margin-left: 80px; margin-top: 150px" *ngFor="let c of carrer">
+        <a (click)="open(c)"> <img class="card-img-top" [src]="c.img" alt="Card image cap"></a>
+    </div>
+</div>
+
+<!--        <a [routerLink]="['/opcionesAsignaturas',c.name]"> <img class="card-img-top" [src]="c.img" alt="Card image cap"></a>
+-->
+
+
+<!--modal del noton registrarse-->

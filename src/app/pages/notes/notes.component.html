@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="column">
+        <h2>Calificaciones diarias</h2>
+        <ul class="list-group">
+            <li class="list-group-item" *ngFor="let n of my_notes" (click)="viewNote(n)">{{n.title}}</li>
+        </ul>
+        <a class="btn btn-primary btn-block" (click)="addNote()">Nueva nota</a>
+    </div>
+    <div class="column" *ngIf="show_form">
+        <h2>Nueva calificacion</h2>
+        <input type="text" placeholder="Titulo de la nota" [(ngModel)]="note.title">
+        <p></p>
+        <br>
+        <textarea class="form-control" placeholder="Cuerpo de la nota" [(ngModel)]="note.description"></textarea>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <a class="btn btn-default btn-block" (click)="cancel()">Cancelar</a>
+            </div>
+            <div class="col-md-6">
+                <a class="btn btn-primary btn-block" (click)="createNote()">Guardar nota</a>
+            </div>
+        </div>
+
+    </div>
+</div>
